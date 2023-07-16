@@ -63,10 +63,8 @@
                 <li><button class="btn btn-outline btn-sm my-3">Login</button></li>
             </ul>
         </div>
-        <Link to="/">
-            <span class="btn btn-ghost normal-case text-xl"
-                >Mentor<span class="font-light">Pick</span></span
-            >
+        <Link to="/" class="font-bold btn btn-ghost font-mono text-lg">
+            Mentor Pick
         </Link>
     </div>
     <div class="navbar-center hidden lg:flex">
