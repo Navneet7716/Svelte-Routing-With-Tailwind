@@ -11,7 +11,9 @@
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<div class="navbar bg-base-100 border border-transparent rounded-md">
+<div
+    class="navbar bg-base-100 border border-transparent rounded-md bg-transparent backdrop-blur antialiased sticky top-0 z-40"
+>
     <div class="navbar-start">
         <div class="dropdown">
             <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -36,13 +38,29 @@
             >
                 <li><Link to="/blogs">Blog</Link></li>
                 <li>
-                    <span>Parent</span>
+                    <span>Courses</span>
                     <ul class="p-2">
-                        <li><span>Submenu 1</span></li>
-                        <li><span>Submenu 2</span></li>
+                        <li><span>Course V1</span></li>
+                        <li><span>Course V2</span></li>
                     </ul>
                 </li>
-                <li><span>Item 3</span></li>
+                <li><span>Contests</span></li>
+
+                <label class="my-2" for="theme-switcher">Theme</label>
+                <li>
+                    <select
+                        id="theme-switcher"
+                        class="select select-bordered ml-2 select-sm max-w-xs"
+                        bind:value={selected}
+                    >
+                        <option value="cupcake">cupcake</option>
+                        <option value="synthwave">synthwave</option>
+                        <option value="dark">dark</option>
+                        <option value="light">light</option>
+                        <option value="dracula">dracula</option>
+                    </select>
+                </li>
+                <li><button class="btn btn-outline btn-sm my-3">Login</button></li>
             </ul>
         </div>
         <Link to="/">
@@ -56,28 +74,29 @@
             <li><Link to="/blogs">Blog</Link></li>
             <li tabindex="0">
                 <details>
-                    <summary>Parent</summary>
+                    <summary>Courses</summary>
                     <ul class="p-2">
-                        <li><span>Submenu 1</span></li>
-                        <li><span>Submenu 2</span></li>
+                        <li><span>Course V1</span></li>
+                        <li><span>Course V2</span></li>
                     </ul>
                 </details>
             </li>
-            <li><span>Item 3</span></li>
+            <li><span>Contests</span></li>
         </ul>
     </div>
-    <div class="navbar-end w">
+    <div class="navbar-end hidden lg:flex">
         <button class="btn btn-outline btn-sm">Login</button>
+        <label class="ml-2" for="theme-switcher">Theme</label>
+        <select
+            id="theme-switcher"
+            class="select select-bordered ml-2 select-sm max-w-xs"
+            bind:value={selected}
+        >
+            <option value="cupcake">cupcake</option>
+            <option value="synthwave">synthwave</option>
+            <option value="dark">dark</option>
+            <option value="light">light</option>
+            <option value="dracula">dracula</option>
+        </select>
     </div>
-    <label class="ml-2 " for="theme-switcher">Theme</label>
-    <select
-        id="theme-switcher"
-        class="select select-bordered ml-2 select-sm max-w-xs"
-        bind:value={selected}
-    >
-        <option value="cupcake">cupcake</option>
-        <option value="synthwave">synthwave</option>
-        <option value="dark">dark</option>
-        <option value="light">light</option>
-    </select>
 </div>
