@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Link } from "svelte-routing";
-    import blogs from "../Common/blogs.json";
+    import blogs from "../../../public/blogs.json";
     import { fade } from "svelte/transition";
 </script>
 

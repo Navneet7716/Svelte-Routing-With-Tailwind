@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Link } from "svelte-routing";
-    import blogs from "../Common/blogs.json";
+    import blogs from "../../../public/blogs.json";
     import { fade } from "svelte/transition";
     import type { RouteParams } from "svelte-routing/types/Route";
     export let params: RouteParams;
